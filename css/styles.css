@@ -1,0 +1,83 @@
+/* Utility-like buttons to complement Tailwind classes */
+.btn, .btn-outline, .btn-quiz {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 150ms;
+  text-decoration: none;
+}
+.btn { background: #4f46e5; color: #fff; }
+.btn:hover { background: #4338ca; }
+.btn-outline { border: 1px solid #cbd5e1; color: #0f172a; }
+.btn-outline:hover { background: #f8fafc; }
+.btn-quiz { background: #059669; color: #fff; }
+.btn-quiz:hover { background: #047857; }
+
+
+/* Drag & drop styles */
+.dd-item {
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  cursor: grab;
+}
+.dd-item:active { cursor: grabbing; }
+.dd-bin {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+.dd-title {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.25rem;
+}
+.dd-drop {
+  min-height: 96px;
+}
+
+/* Quiz form tweaks */
+.quiz-form label { cursor: pointer; }
+.quiz-result, .dd-result { min-height: 1.25rem; }
+
+
+/* Sidebar links */
+.side-link {
+  display: block;
+  background: #fff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  transition: all 150ms;
+}
+.side-link:hover { background: #f8fafc; transform: translateX(2px); }
+.side-link.active { border-color: #4f46e5; box-shadow: 0 0 0 2px rgba(79,70,229,0.15); }
+.side-link.done { border-color: #059669; }
+.side-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.5rem; height: 1.5rem; border-radius: 9999px;
+  background: #e0e7ff; color: #3730a3; font-weight: 700; margin-right: 0.5rem;
+}
+
+/* Module number badge */
+.mod-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 0.75rem;
+  background: #4f46e5; color: #fff; font-weight: 800;
+}
+
+/* Dark mode tweaks */
+:root.dark .side-link { background: #0b1220; color: #e5e7eb; border-color: #1f2937; }
+:root.dark .side-link:hover { background: #0f172a; }
+:root.dark .side-badge { background: #312e81; color: #c7d2fe; }
+
